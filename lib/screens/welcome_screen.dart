@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ebook_app/constants.dart';
 import 'package:ebook_app/widgets/widgets.dart';
+import 'screens.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -34,9 +35,22 @@ class WelcomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              RoundButton(
-                label: 'Start Reading',
-                function: () {},
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.6,
+              
+                child: RoundButton(
+                  label: 'Start Reading',
+                  function: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return HomeScreen();
+                        },
+                      ),
+                    );
+                  },
+                ),
               ),
             ],
           ),

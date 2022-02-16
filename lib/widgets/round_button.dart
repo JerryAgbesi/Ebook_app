@@ -28,9 +28,13 @@ class RoundButton extends StatelessWidget {
             ),
           ],
         ),
-        child:  Text(
+        child: Text(
           label,
-          style: TextStyle(fontWeight: FontWeight.w800, fontSize: fontsize),
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontWeight: FontWeight.w800,
+            fontSize: fontsize,
+          ),
         ),
       ),
     );
