@@ -1,4 +1,6 @@
+import 'package:ebook_app/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
+import 'package:ebook_app/widgets/widgets.dart';
 import 'package:ebook_app/constants.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    
+
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -46,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               margin: EdgeInsets.all(16.0),
               height: 235,
-              width: 201,
+              width: 215,
               child: Stack(children: <Widget>[
                 Positioned(
                   bottom: 0,
@@ -80,11 +82,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         });
                       },
                       icon: liked
-                          ? Icon(Icons.favorite_border)
-                          : Icon(
+                          ? const Icon(Icons.favorite_border)
+                          : const Icon(
                               Icons.favorite,
                               color: Colors.red,
                             )),
+                ),
+                const Positioned(
+                  top: 80,
+                  right: 10,
+                  child: bookRating(rating: 4.0),
                 ),
               ]),
             ),
