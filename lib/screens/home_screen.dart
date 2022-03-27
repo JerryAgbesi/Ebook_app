@@ -24,32 +24,31 @@ class _HomeScreenState extends State<HomeScreen> {
                 fit: BoxFit.fitWidth,
                 alignment: Alignment.topCenter,
                 image: AssetImage('assets/images/main_page_bg.png'))),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: size.height * .1,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(30.0),
-              child: RichText(
-                  text: TextSpan(
-                      style: Theme.of(context).textTheme.headline4,
-                      children: const [
-                    TextSpan(text: 'What are you \nreading '),
-                    TextSpan(
-                        text: 'today?',
-                        style: TextStyle(fontWeight: FontWeight.bold))
-                  ])),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Container(
-              margin: EdgeInsets.all(16.0),
-              height: 235,
-              width: 215,
-              child: Stack(children: <Widget>[
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(
+            height: size.height * .1,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: RichText(
+                text: TextSpan(
+                    style: Theme.of(context).textTheme.headline4,
+                    children: const [
+                  TextSpan(text: 'What are you \nreading '),
+                  TextSpan(
+                      text: 'today?',
+                      style: TextStyle(fontWeight: FontWeight.bold))
+                ])),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          Container(
+            margin: EdgeInsets.all(16.0),
+            height: 235,
+            width: 215,
+            child: Stack(
+              children: <Widget>[
                 Positioned(
                   bottom: 0,
                   left: 0,
@@ -93,10 +92,39 @@ class _HomeScreenState extends State<HomeScreen> {
                   right: 10,
                   child: bookRating(rating: 4.0),
                 ),
-              ]),
+                Positioned(
+                  top: 160,
+                  child: Container(
+                      height: 85,
+                      width: 202,
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8),
+                            child: RichText(
+                              text: const TextSpan(
+                                style: TextStyle(color: kBlackColor),
+                                children: [
+                                  TextSpan(
+                                    text: 'Crushing & Influence\n',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                      text: 'Gary Venchuk',
+                                      style: TextStyle(color: kLightBlack)),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      )),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ]),
       ),
     );
   }
