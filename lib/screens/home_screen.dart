@@ -45,8 +45,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Container(
             margin: EdgeInsets.all(16.0),
-            height: 235,
-            width: 215,
+            height: 245,
+            width: 202,
             child: Stack(
               children: <Widget>[
                 Positioned(
@@ -117,6 +117,32 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ],
                               ),
                             ),
+                          ),
+                          Spacer(),
+                          Row(
+                            children: <Widget>[
+                              Container(
+                                width: 101,
+                                padding: EdgeInsets.symmetric(vertical: 10),
+                                alignment: Alignment.center,
+                                child: Text('Details'),
+                              ),
+                              Expanded(
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(vertical: 10),
+                                  alignment: Alignment.center,
+                                  child: const Text(
+                                    'Read',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  decoration: const BoxDecoration(
+                                      color: kBlackColor,
+                                      borderRadius: BorderRadius.only(
+                                          bottomRight: Radius.circular(29),
+                                          topLeft: Radius.circular(29))),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       )),
