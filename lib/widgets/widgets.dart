@@ -1,2 +1,3 @@
 export 'round_button.dart';
-import 'book_rating.dart';
+export 'book_rating.dart'; 
+export 'double_sided_button.dart';
