@@ -4,7 +4,7 @@ import 'package:ebook_app/constants.dart';
 
 class bookRating extends StatelessWidget {
   final double rating;
-  const bookRating({
+ bookRating({
     Key? key,
     required this.rating,
   }) : super(key: key);
