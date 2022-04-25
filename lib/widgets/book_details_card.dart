@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:ebook_app/constants.dart';
 import 'package:ebook_app/widgets/widgets.dart';
@@ -116,7 +115,9 @@ class BookDetailsCard extends StatelessWidget {
                         Expanded(
                           child: DoubleSidedButton(
                             label: 'Read',
-                            press: () {},
+                            press: () {
+                             
+                            },
                           ),
                         ),
                       ],
