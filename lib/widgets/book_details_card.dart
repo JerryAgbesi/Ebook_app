@@ -105,7 +105,7 @@ class BookDetailsCard extends StatelessWidget {
                       children: <Widget>[
                         GestureDetector(
                           onTap: () {
-                            detailsFunction;
+                            detailsFunction();
                           },
                           child: Container(
                             width: 101,
