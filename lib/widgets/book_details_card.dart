@@ -104,7 +104,9 @@ class BookDetailsCard extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            detailsFunction;
+                          },
                           child: Container(
                             width: 101,
                             padding: EdgeInsets.symmetric(vertical: 10),
@@ -115,9 +117,7 @@ class BookDetailsCard extends StatelessWidget {
                         Expanded(
                           child: DoubleSidedButton(
                             label: 'Read',
-                            press: () {
-                             
-                            },
+                            press: () {},
                           ),
                         ),
                       ],

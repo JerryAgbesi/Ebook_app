@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ebook_app/widgets/widgets.dart';
 import 'package:ebook_app/constants.dart';
 
+import 'book_details_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -57,7 +59,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       readFunction: () {
                         print(size.width);
                       },
-                      detailsFunction: () {},
+                      detailsFunction: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return BookDetailsScreen();
+                        }));
+                      },
                     ),
                     BookDetailsCard(
                         image: 'assets/images/book-2.png',
