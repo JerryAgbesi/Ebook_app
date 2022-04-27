@@ -25,14 +25,14 @@ class BookDetailsScreen extends StatelessWidget {
                   fit: BoxFit.fitWidth),
             ),
             child: Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Row(children: [
                 Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       RichText(
-                        text: TextSpan(
+                        text: const TextSpan(
                           children: [
                             TextSpan(text: "Crushing & "),
                             TextSpan(
@@ -53,7 +53,7 @@ class BookDetailsScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Spacer(),
+               const Spacer(),
                 Image.asset("assets/images/book-1.png")
               ]),
             ),
