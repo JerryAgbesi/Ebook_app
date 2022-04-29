@@ -41,15 +41,15 @@ class BookDetailsScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      // const Expanded(
-                      //   child: Text(
-                      //     "When the earth was flat and everyone wanted to"
-                      //     " win the game  with the best people ... ",
-                      //     maxLines: 3,
-                      //     overflow: TextOverflow.ellipsis,
-                      //     style: TextStyle(fontSize: 11, color: kLightBlack),
-                      //   ),
-                      // ),
+                      const Expanded(
+                        child: Text(
+                          "When the earth was flat and everyone wanted to"
+                          " win the game  with the best people ... ",
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontSize: 11, color: kLightBlack),
+                        ),
+                      ),
                     ],
                   ),
                 ),

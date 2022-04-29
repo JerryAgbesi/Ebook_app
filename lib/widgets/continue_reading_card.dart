@@ -29,7 +29,7 @@ class ContinueReadingCard extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(
+                        padding: const EdgeInsets.only(
                           left: 20,
                         ),
                         child: Column(
@@ -56,7 +56,7 @@ class ContinueReadingCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                  const  SizedBox(
                       width: 10,
                     ),
                     const Image(
@@ -82,7 +82,7 @@ class ContinueReadingCard extends StatelessWidget {
             boxShadow: [
               BoxShadow(
                 color: kShadowColor,
-                offset: Offset(0, 10),
+                offset: const Offset(0, 10),
                 blurRadius: 33,
               )
             ]),
