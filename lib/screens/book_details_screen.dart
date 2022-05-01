@@ -11,53 +11,56 @@ class BookDetailsScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            width: double.infinity,
-            height: size.height * .45,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(60),
-                bottomRight: Radius.circular(60),
-              ),
-              image: DecorationImage(
-                  image: AssetImage("assets/images/bg.png"),
-                  alignment: Alignment.topCenter,
-                  fit: BoxFit.fitWidth),
-            ),
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              child: Row(children: [
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      RichText(
-                        text: const TextSpan(
-                          children: [
-                            TextSpan(text: "Crushing & "),
-                            TextSpan(
-                                text: "Influence",
-                                style: TextStyle(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                      ),
-                      const Expanded(
-                        child: Text(
-                          "When the earth was flat and everyone wanted to"
-                          " win the game  with the best people ... ",
-                          maxLines: 3,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(fontSize: 11, color: kLightBlack),
-                        ),
-                      ),
-                    ],
+          Stack(
+            children: [
+              Container(
+                width: double.infinity,
+                height: size.height * .45,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(50),
+                    bottomRight: Radius.circular(50),
                   ),
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/bg.png"),
+                      alignment: Alignment.topCenter,
+                      fit: BoxFit.fitWidth),
                 ),
-               const Spacer(),
-                Image.asset("assets/images/book-1.png")
-              ]),
-            ),
-          ),
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  child: Row(children: [
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          RichText(
+                            text: const TextSpan(
+                              children: [
+                                TextSpan(text: "Crushing & "),
+                                TextSpan(
+                                    text: "Influence",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          ),
+                          const Text(
+                            "When the earth was flat and everyone wanted to"
+                            " win the game  with the best people ... ",
+                            maxLines: 5,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 10, color: kLightBlack),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Spacer(),
+                    Image.asset("assets/images/book-1.png")
+                  ]),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
